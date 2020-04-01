@@ -42,7 +42,11 @@ package com.gqq.leetcode.difficulty.easy;
  * For the purpose of this problem, we will return 0 when needle is an empty
  * string. This is consistent to C's strstr() and Java's indexOf().
  *
- * 主要借助substring的截取功能
+ *
+ * 解法说明：
+ * 借助String的substring功能，遍历haystack，依次截取 i-needle.length 长度的字符串与needle对比
+ * 一致的话，那么i即是第一个haystack中needle的索引。
+ *
  *
  */
 class LC028 {

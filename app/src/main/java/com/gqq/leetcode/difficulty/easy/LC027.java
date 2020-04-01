@@ -70,9 +70,15 @@ package com.gqq.leetcode.difficulty.easy;
 
 /**
  * 解法说明：
+ *
  * 1. 设置一个result代表返回的长度，那么result的长度的数组的值一定是除去val值的数据
  * 2. 遍历数组，如果不等于val，那么就将nums[result]置为当前索引i的值，然后result累加1
  *
+ * 3 2 2 3      i = 0; result = 0; num[i] == val 不处理
+ * 3 2 2 3      i = 1; result = 0; num[i] != val --> num[result] = num[i] result ++
+ * 2 2 2 3      i = 2; result = 1; num[i] != val --> num[result] = num[i] result ++
+ * 2 2 2 3      i = 3; result = 2; num[i] == val 不处理
+ * so result = 2; 数组前 2 个长度的数据 [2, 2]
  *
  */
 class LC027 {
