@@ -3,8 +3,19 @@ package com.gqq.leetcode.tag.sort;
 /**
  * 排序算法：
  * 1. 冒泡排序
+ *      冒泡排序是稳定的原地排序：冒泡判断时相同可以不交换
+ *      时间复杂度：O(n^2): 最好O(n),最坏O(n^2)
+ *      空间复杂度：O(1)，交换时临时变量
+ *
  * 2. 插入排序
+ *      插入排序是稳定的原地排序：插入时相同不交换
+ *      时间复杂度：O(n^2): 最好O(n),最坏O(n^2)
+ *      空间复杂度：O(1)，交换时临时变量
+ *
  * 3. 选择排序
+ *      选择排序是原地、不稳定排序：选择的数据直接交换，会破坏稳定性
+ *      时间复杂度：O(n^2): 最好O(n),最坏O(n^2)
+ *      空间复杂度：O(1)，交换时临时变量
  *
  * 4. 归并排序： 分治与递归
  *      归并排序是稳定排序：主要取决于数组合并的时候是否会交换位置，代码实现可以保证不会交换。
@@ -14,8 +25,8 @@ package com.gqq.leetcode.tag.sort;
  *          ==> O(nlogn)
  *      空间复杂度：O(n), 合并的时候申请了n个空间的数组用于存放数据，归并排序并不是原地排序，所以应用不广泛
 
- * 参考资料：
- * https://www.cnblogs.com/chengxiao/p/6194356.html
+ *      参考资料：
+ *      https://www.cnblogs.com/chengxiao/p/6194356.html
 
 
  * 5. 快速排序： 分治与递归
@@ -23,7 +34,11 @@ package com.gqq.leetcode.tag.sort;
  *      时间复杂度：O(nlogn)，最坏时间复杂度O(n^2)
  *      空间复杂度：O(1)，原地排序
  *
- * 参考资料：https://blog.csdn.net/qq_40941722/article/details/94396010
+ *      参考资料：https://blog.csdn.net/qq_40941722/article/details/94396010
+ *
+ * 线性排序
+ * 6. 桶排序：
+ *
  *
 
  * 分治是一种解决问题的处理思想，递归是一种编程技巧。
@@ -118,7 +133,7 @@ public class Sort {
         }
     }
 
-    // Q: 如何在O(n)的时间复杂度内查找一个无序数组中的第k大元素？
+    // Q: 如何在O(n)的时间复杂度内查找一个无序数组中的第k大元素？ A: LC215
     // 归并排序：分治思想
     public static void mergeSort(int[] a) {
         int[] temp = new int[a.length];
