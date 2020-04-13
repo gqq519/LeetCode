@@ -36,6 +36,10 @@ package com.gqq.leetcode.tag.sort;
  *
  *      参考资料：https://blog.csdn.net/qq_40941722/article/details/94396010
  *
+ *      优化：基准点的选择
+ *      1. 三数取中
+ *      2. 随机法
+ *
  * 线性排序
  * 6. 桶排序：
  *
