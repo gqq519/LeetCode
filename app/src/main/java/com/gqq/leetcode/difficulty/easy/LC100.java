@@ -47,7 +47,7 @@ public class LC100 {
 
     public static void printNode(StringBuilder builder, TreeNode node) {
         if (node == null) return;
-        builder.append(node.data);
+        builder.append(node.val);
         printNode(builder, node.left);
         printNode(builder, node.right);
     }

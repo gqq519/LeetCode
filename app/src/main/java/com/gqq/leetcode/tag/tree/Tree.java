@@ -43,9 +43,8 @@ import java.util.LinkedList;
  *      最差情况(退化为链表)O(n), 完全二叉树O(logn)
  *      时间复杂度其实都跟树的高度成正比，也就是 O(height)。
  *
- * 平衡二叉树：
- *
- *
+ * 平衡二叉查找树：
+ *  红黑树：由2-3树发展而来，资料：https://www.cnblogs.com/tiancai/p/9072813.html
  *
  */
 public class Tree {

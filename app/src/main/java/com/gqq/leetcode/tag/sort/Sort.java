@@ -137,14 +137,15 @@ public class Sort {
         }
     }
 
-    // Q: 如何在O(n)的时间复杂度内查找一个无序数组中的第k大元素？ A: LC215
     // 归并排序：分治思想
+    // Q: 如何在O(n)的时间复杂度内查找一个无序数组中的第k大元素？ A: LC215
     public static void mergeSort(int[] a) {
         int[] temp = new int[a.length];
         sort(a, 0, a.length - 1, temp);
 
     }
 
+    // 归并排序：递归排序
     public static void sort(int[] a, int left, int right, int[] temp) {
         if (left < right) {
             int mid = (left + right) / 2;
@@ -156,6 +157,7 @@ public class Sort {
         }
     }
 
+    // 归并排序：合并排好序的数据
     private static void merge(int[] a, int left, int mid, int right, int[] temp) {
         int i = left;
         int j = mid + 1;
