@@ -20,44 +20,23 @@ import com.gqq.leetcode.TreeNode;
  *
  * Input:     1         1
  *           /           \
- *          2             2
+ *          2               2
  *
  *         [1,2],     [1,null,2]
  *
  * Output: false
  *
  * 解法说明：
- *
+ * 利用递归判断逐层判断树的节点。
  *
  */
 public class LC100 {
 
-    public static void main(String[] args) {
-
-    }
-
     public static boolean isSameTree(TreeNode p, TreeNode q) {
 
-        StringBuilder strp = new StringBuilder();
-        StringBuilder strq = new StringBuilder();
-        printNode(strp, p);
-        printNode(strq, q);
-        return strp.toString().equals(strq.toString());
-    }
-
-    public static void printNode(StringBuilder builder, TreeNode node) {
-        if (node == null) return;
-        builder.append(node.val);
-        printNode(builder, node.left);
-        printNode(builder, node.right);
-    }
-
-
-
-    // 数组转换为树
-    public static TreeNode convertTree(int[] data) {
-        TreeNode node = null;
-
-        return node;
+        if (p == null && q == null) return true;
+        if (p == null || q == null) return false;
+        if (p.val != q.val) return false;
+        return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
     }
 }

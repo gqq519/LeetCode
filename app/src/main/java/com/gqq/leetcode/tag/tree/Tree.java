@@ -67,7 +67,6 @@ public class Tree {
         node3.left = node6;
         node3.right = node7;
 
-
 //        printNode(tree);
         levelOrder(tree);
     }
@@ -155,7 +154,7 @@ public class Tree {
         Node p = tree; // 遍历的节点
         Node pp = null; // 遍历节点的父节点
 
-        // 遍历出需要删除的节点: p.data != data的条件主要是为了父节点的正确赋值
+        // 遍历出需要删除的节点: p.val != data的条件主要是为了父节点的正确赋值
         while (p != null && p.data != data) {
             pp = p;
             if (data > p.data) {
