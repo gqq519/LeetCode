@@ -24,11 +24,6 @@ import java.util.Queue;
  *   [15,7]
  * ]
  *
- *          1
- *         / \
- *        2  3
- *       /    \
- *      4      5
  */
 public class LC103 {
 
