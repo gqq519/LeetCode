@@ -44,17 +44,13 @@ public class LC122 {
         int min = prices[0];
         int res = 0;
         for (int i = 0; i < prices.length; i++) {
-            if (i < prices.length - 1) {
-                if (prices[i] > prices[i + 1] && min < prices[i]) {
-                    res += prices[i] - min;
-                    min = prices[i];
-                } else if (min > prices[i]){
-                    min = prices[i];
-                }
-            } else if (i == prices.length - 1){
-                if (prices[i] > min) {
-                    res += prices[i] - min;
-                }
+            if (prices[i] < min) {
+                min = prices[i];
+            }
+
+            if (prices[i] - min > 0) {
+                res += prices[i] - min;
+                min = prices[i];
             }
         }
         return res;
