@@ -1,7 +1,11 @@
 package com.gqq.leetcode.tag.tree;
 
+import org.w3c.dom.Node;
+
+import java.util.ArrayDeque;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
 
 /**
  * 树：
@@ -91,8 +95,8 @@ public class Tree {
         System.out.print(tree.data);
     }
 
-    // 层序遍历
-    public static void levelOrder(Node root) {
+    // 层序遍历:广度优先遍历
+    public static void levelOrder1(Node root) {
         if (root == null) {
             return;
         }
@@ -106,6 +110,40 @@ public class Tree {
             }
             if (currentNode.right != null) {
                 queue.add(currentNode.right);
+            }
+        }
+    }
+
+    // 深度优先遍历
+    public static void depthOrder(Node root) {
+        if (root == null) return;
+        Stack<Node> stack = new Stack<>();
+        stack.push(root);
+        while (!stack.isEmpty()) {
+            Node node = stack.pop();
+            System.out.println(node.data + "");
+            if (node.left != null) {
+                stack.push(node.left);
+            }
+            if (node.right != null) {
+                stack.push(node.right);
+            }
+        }
+    }
+
+    // 广度优先遍历
+    public static void levelOrder(Node root) {
+        if (root == null) return;
+        ArrayDeque<Node> queue = new ArrayDeque<>();
+        queue.add(root);
+        while (!queue.isEmpty()) {
+            Node node = queue.poll();
+            System.out.println(node.data + "");
+            if (node.left != null) {
+                queue.add(node.left);
+            }
+            if (node.right != null) {
+                queue.add(node.right);
             }
         }
     }
