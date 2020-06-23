@@ -22,6 +22,10 @@ import java.util.Map;
  *
  * All inputs will be in lowercase.
  * The order of your output does not matter.
+ *
+ * 解法说明：
+ * 借助HashMap和排序
+ *
  */
 public class LC049 {
     public List<List<String>> groupAnagrams(String[] strs) {
