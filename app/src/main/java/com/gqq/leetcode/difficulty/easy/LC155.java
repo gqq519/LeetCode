@@ -81,7 +81,7 @@ public class LC155 {
         public void push(int x) {
 
             // push到新最小值的时候将x和当前的最小值一起入栈
-            if (x < min) {
+            if (x <= min) {
                 stack.push(min);
                 min = x;
             }
@@ -101,6 +101,4 @@ public class LC155 {
             return min;
         }
     }
-
-
 }
