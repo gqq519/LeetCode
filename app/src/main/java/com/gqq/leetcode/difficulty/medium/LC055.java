@@ -28,15 +28,23 @@ package com.gqq.leetcode.difficulty.medium;
  */
 public class LC055 {
 
-    public boolean canJump(int[] nums) {
-        int max = 0;
-        for (int i = 0; i < nums.length; i++) {
-            if (i > max) {
-                return false;
-            }
-            max = Math.max(nums[i] + i, max);
-        }
-        return true;
+    public static void main(String[] args) {
+        canJump(new int[]{1,2,3});
     }
 
+    public static boolean canJump(int[] nums) {
+        if (nums.length == 0) return false;
+        int max = nums[0];
+        for (int i = 0; i < nums.length; i++) {
+            int num = nums[i];
+            if (max >= nums.length - 1) {
+                return true;
+            }
+            max = Math.max(max, i + num);
+            if (max - i == 0 && i != nums.length - 1) {
+                return false;
+            }
+        }
+        return false;
+    }
 }
