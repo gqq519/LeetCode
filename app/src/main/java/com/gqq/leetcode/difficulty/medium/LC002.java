@@ -12,6 +12,12 @@ import com.gqq.leetcode.ListNode;
  * Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
  * Output: 7 -> 0 -> 8
  * Explanation: 342 + 465 = 807.
+ *
+ * https://leetcode-cn.com/problems/add-two-numbers/
+ *
+ * 解题说明：
+ * 两个链表都是逆序存储数据位数的，所以相同位置的数字是可以直接相加的，进位的话需要向链表下一位进位+1
+ *
  */
 public class LC002 {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {

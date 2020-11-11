@@ -24,6 +24,14 @@ import java.util.Set;
  * Explanation: The answer is "wke", with the length of 3.
  *              Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
  *
+ *
+ * https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/
+ *
+ * 解题说明：
+ * 借助双重for循环和List
+ * 第一层for循环：从哪里开始截取的子串长度最大
+ * 第二层for循环：从其实位置往后查找最大的子串
+ *
  */
 public class LC003 {
 
