@@ -42,6 +42,12 @@ package com.gqq.leetcode.difficulty.medium;
  * Output: -2147483648
  * Explanation: The number "-91283472332" is out of the range of a 32-bit signed integer.
  *              Thefore INT_MIN (−231) is returned.
+ *
+ *
+ * 解题说明：
+ * 1、首先通过StringBuilder累计得到一个符合规则后的字符串
+ * 2、字符串转换为long，判断是否超过了Int的最大和最小值，返回正确的数据
+ *
  */
 public class LC008 {
 

@@ -12,6 +12,14 @@ package com.gqq.leetcode.difficulty.medium;
  *
  * Input: "cbbd"
  * Output: "bb"
+ *
+ * https://leetcode-cn.com/problems/longest-palindromic-substring/
+ *
+ * 解题说明：最长回文子串
+ * 从字符串某字符为基点，向前/向后遍历对比，找到前后相同的字符最大长度
+ * 需要考虑两种情况：回文字符串是偶数长度/奇数长度
+ *
+ *
  */
 public class LC005 {
 

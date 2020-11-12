@@ -1,6 +1,6 @@
 package com.gqq.leetcode.difficulty.easy;
 
-/*
+/**
  * @lc app=leetcode id=14 lang=java
  *
  * [14] Longest Common Prefix
@@ -42,7 +42,8 @@ package com.gqq.leetcode.difficulty.easy;
  * solution:
  * https://leetcode.com/problems/longest-common-prefix/solution/
  * 
- * 需要找一个最优解！！
+ * 解题说明：
+ * TODO 更优解
  * 
  * 
  */

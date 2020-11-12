@@ -1,6 +1,6 @@
 package com.gqq.leetcode.difficulty.easy;
 
-/*
+/**
  * @lc app=leetcode id=13 lang=java
  *
  * [13] Roman to Integer
@@ -8,7 +8,7 @@ package com.gqq.leetcode.difficulty.easy;
  * https://leetcode.com/problems/roman-to-integer/description/
  *
  * algorithms
- * Easy (52.13%)
+ * Easy (52.13%)1
  * Likes:    1278
  * Dislikes: 2683
  * Total Accepted:    431.9K
@@ -89,15 +89,17 @@ package com.gqq.leetcode.difficulty.easy;
  * D             500
  * M             1000
  * 
- * IV            4
+ * IV            4          IV、IX 相当于是需要减去I所代表的1
  * IX            9
  * 
- * XL            40
+ * XL            40         XL、XC 相当于是需要减去X所代表的10
  * XC            90
  * 
- * CD            400
+ * CD            400        CD、CM 相当于是需要减去X所代表的100
  * CM            900
- * 
+ *
+ * 罗列几种字符所代表的不同的数据，进行加减的操作
+ * 需要特别注意的是几种组合，是相减的操作。
  * 
  */
 class LC013 {

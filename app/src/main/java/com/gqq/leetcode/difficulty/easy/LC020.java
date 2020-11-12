@@ -64,9 +64,11 @@ import java.util.Stack;
  * Input: "{[]}"
  * Output: true
  *
- * thought:
- * 借助Stack的入栈和出栈思想实现。
  *
+ *
+ * 解题说明：
+ * 借助Stack的入栈和出栈思想实现。
+ * 将配对的()[]{}分别存储为key和value，遍历的时候根据当前的字符进行选择入栈或出栈的操作
  *
  */
 
@@ -90,6 +92,8 @@ public class LC020 {
         Stack<Character> stack = new Stack<>();
         for (int i = 0; i < s.length(); i++) {
             char str = s.charAt(i);
+
+            // 如果是属于key，那么需要处理看是否在当前的栈顶是对应的闭合符号
             if (map.containsKey(str)) {
                 // 处理弹出
                 char topEle = stack.peek();
@@ -104,7 +108,7 @@ public class LC020 {
                 }
 
             } else {
-                // 是个key
+                // 是value，开的符合，存入到Stack中
                 stack.push(str);
             }
         }

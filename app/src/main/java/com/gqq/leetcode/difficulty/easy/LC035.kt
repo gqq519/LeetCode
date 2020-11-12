@@ -48,6 +48,7 @@
  *
  * 解法说明：
  * 循环遍历，对比当前index的数据与target的大小
+ * 当前index的值等于target或者大于target，则等于当前index
  *
  */
 

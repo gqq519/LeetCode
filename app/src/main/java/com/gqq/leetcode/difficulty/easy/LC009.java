@@ -1,6 +1,6 @@
 package com.gqq.leetcode.difficulty.easy;
 
-/*
+/**
  * @lc app=leetcode id=9 lang=java
  *
  * [9] Palindrome Number
@@ -46,6 +46,17 @@ package com.gqq.leetcode.difficulty.easy;
  * Follow up:
  *
  * Coud you solve it without converting the integer to a string?
+ *
+ * 解题说明：不借助转换为string的方式
+ * 1、负数及末尾为0的数据不是，首先要排除掉
+ * 2、将x不断取余后得到反转的数据，直到x小于/等于reverse
+ *    x         everse     x之后
+ *   12321      1          1232
+ *   1232       12         123
+ *   123        123        12
+ *   x 小于 reverse了，不再进行下一步
+ *
+ * 3、然后判断 x 和revse是否符合回文的规则：x == reverse（x偶数） 或者 x == reverse / 10 （x奇数）
  *
  */
 

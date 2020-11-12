@@ -16,8 +16,11 @@ package com.gqq.leetcode.difficulty.medium;
  * Input: nums = [5,7,7,8,8,10], target = 6
  * Output: [-1,-1]
  *
+ * https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/
+ *
  * 解题思路:
  * 二分查找的变形体：找到第一个和最后一个等于给定值问题集合
+ *
  */
 public class LC034 {
     public static void main(String[] args) {

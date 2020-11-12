@@ -1,6 +1,6 @@
 package com.gqq.leetcode.difficulty.easy;
 
-/*
+/**
  * @lc app=leetcode id=21 lang=java
  *
  * [21] Merge Two Sorted Lists
@@ -23,9 +23,11 @@ package com.gqq.leetcode.difficulty.easy;
  * Input: 1->2->4, 1->3->4
  * Output: 1->1->2->3->4->4
  *
- * thought:
+ * 解题思路:
  * 考察链表的结构和操作
- *
+ * 1、利用双指针分别指向两个链表，while循环进行遍历，对比两个指针指向的节点的数据
+ * 2、遍历的条件是两个链表节点都不为空，那么遍历结束之后，可能存在一个链表遍历完了，另一个链表还存在数据
+ * 3、把遍历结束还有数据的链表追加到合并列表的后面
  *
  */
 

@@ -1,6 +1,6 @@
 package com.gqq.leetcode.difficulty.easy;
 
-/*
+/**
  * @lc app=leetcode id=7 lang=java
  *
  * [7] Reverse Integer
@@ -44,7 +44,7 @@ package com.gqq.leetcode.difficulty.easy;
  * of this problem, assume that your function returns 0 when the reversed
  * integer overflows.
  *
- * thought：
+ * 解题说明：
  * 取余 求整
  * 123
  * 1. 123 % 10 = 3   123 / 10 = 12  3

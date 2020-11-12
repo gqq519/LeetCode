@@ -18,6 +18,7 @@ Given 1->2->3->4, you should return the list as 2->1->4->3.
 
  解法说明：
  主要是借助一个空链表头，其次是链表的反转
+ 1、
 
  */
 public class LC024 {

@@ -23,7 +23,12 @@ import java.util.List;
  *
  * 解法说明：
  *
- * 利用排序和快慢指针的方式
+ * 利用排序和双指针的方式
+ *
+ * 1、先进行排序，形成一个有序数组
+ * 2、如果数组长度为0或者有序数组第一个数据>0，那么返回空列表
+ * 3、通过for循环，依次取得第i位的数据(如果i与i-1的数据相同，就没必要进行判断了)，然后往后找到剩下的两个数据
+ * 4、找剩下的两个数据可以利用双指针的方式，从i + 1开始到nums.length - 1，分别向前向后遍历，得到和为 0 - nums[i] 的两条数据
  *
  */
 public class LC015 {
@@ -57,6 +62,8 @@ public class LC015 {
         Arrays.sort(nums);
         if (nums.length <= 0 || nums[0] > 0) return lists;
         for (int i = 0; i < nums.length - 2; i++) {
+
+            // 如果此轮遍历的数据与上轮的数据一致，不进行遍历了，没有必要
             if (i > 0 && nums[i] == nums[i - 1]) {
                 continue;
             }

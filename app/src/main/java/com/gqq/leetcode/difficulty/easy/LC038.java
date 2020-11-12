@@ -1,13 +1,15 @@
 package com.gqq.leetcode.difficulty.easy;
 
 /**
- * Created by gqq on 2019-12-28.
+ * https://leetcode-cn.com/problems/count-and-say/
+ *
  * 报数：报上一个的数
  * 1：1
  * 2：11 一个1
  * 3：21 两个1
  * 4：1211 一个2一个1
  * 5：。。。。。。
+ *
  *
  * 解法思路：
  * 1. 首先定义一个num，用于记录当前计算的第几个数据，主要是与需要计算的第n个数对比
@@ -41,7 +43,7 @@ public class LC038 {
 
             for (int i = 0; i < result.length(); i++) {
 
-                // 判断有几个相同的书=数据
+                // 判断有几个相同的数=数据
                 if (currentNum == result.charAt(i)) {
                     currentCount ++;
                 } else {

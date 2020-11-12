@@ -1,35 +1,106 @@
-#### 数组 & 链表 & 字符串
+### 数组 & 链表 & 字符串
 
-| 题号 |                          标题&描述                           |                        本仓库题解代码                        |                         优秀题解描述                         | 难度 |                           解题思路                           |
-| :--: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :--: | :----------------------------------------------------------: |
-|  1   | [两数之和](https://leetcode-cn.com/problems/two-sum/description/) | [LC206.java](https://github.com/gqq519/LeetCode/blob/master/app/src/main/java/com/gqq/leetcode/interview/LC206.java) | [Solutions](https://leetcode-cn.com/problems/reverse-linked-list/solution/) | 简单 | 1、迭代的方式：利用while循环，借助一个null作为pre，记录反转前的当前节点、上一个节点、下一个节点，迭代结束的条件即next为空 <br>2、递归的方式：每次递归反转两个元素，直到链表反转结束，思想其实跟迭代的方式很类似 |
-|  2   | [两数相加](https://leetcode-cn.com/problems/add-two-numbers/) | [LC002.java](https://github.com/gqq519/LeetCode/blob/master/app/src/main/java/com/gqq/leetcode/difficulty/medium/LC002.java) | [Solutions](https://leetcode-cn.com/problems/add-two-numbers/solution/) | 中等 | 两个链表都是逆序存储数据位数的，所以相同位置的数字是可以直接相加的，进位的话需要向链表下一位进位+1 |
-|  3   | [[无重复字符的最长子串](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/)](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/) | [LC003.java](https://github.com/gqq519/LeetCode/blob/master/app/src/main/java/com/gqq/leetcode/difficulty/medium/LC003.java) | [Solutions](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/solution/) | 中等 | 借助双重for循环和List 第一层for循环：从哪里开始截取的子串长度最大 第二层for循环：从其实位置往后查找最大的子串 |
-|      |                                                              |                                                              |                                                              |      |                                                              |
-|      |                                                              |                                                              |                                                              |      |                                                              |
-|      |                                                              |                                                              |                                                              |      |                                                              |
-|      |                                                              |                                                              |                                                              |      |                                                              |
-|      |                                                              |                                                              |                                                              |      |                                                              |
-| 206  | [反转链表](https://leetcode-cn.com/problems/reverse-linked-list/?utm_source=LCUS&utm_medium=ip_redirect_q_uns&utm_campaign=transfer2china) | [LC206.java](https://github.com/gqq519/LeetCode/blob/master/app/src/main/java/com/gqq/leetcode/interview/LC206.java) | [Solutions](https://leetcode-cn.com/problems/reverse-linked-list/solution/) | 简单 | 1、迭代的方式：利用while循环，借助一个null作为pre，记录反转前的当前节点、上一个节点、下一个节点，迭代结束的条件即next为空 <br>2、递归的方式：每次递归反转两个元素，直到链表反转结束，思想其实跟迭代的方式很类似 |
+| 题号 |                           题目链接                           |                        本仓库题解代码                        | 级别 |                |
+| :--: | :----------------------------------------------------------: | :----------------------------------------------------------: | :--: | :------------: |
+|  1   | [两数之和](https://leetcode-cn.com/problems/two-sum/description/) | [LC001.java](https://github.com/gqq519/LeetCode/blob/master/app/src/main/java/com/gqq/leetcode/difficulty/easy/LC001.java) | 简单 |      数组      |
+|  2   | [两数相加](https://leetcode-cn.com/problems/add-two-numbers/) | [LC002.java](https://github.com/gqq519/LeetCode/blob/master/app/src/main/java/com/gqq/leetcode/difficulty/medium/LC002.java) | 中等 |      链表      |
+|  3   | [无重复字符的最长子串](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/) | [LC003.java](https://github.com/gqq519/LeetCode/blob/master/app/src/main/java/com/gqq/leetcode/difficulty/medium/LC003.java) | 中等 |     字符串     |
+|  5   | [最长回文子串](https://leetcode-cn.com/problems/longest-palindromic-substring/) | [LC005.java](https://github.com/gqq519/LeetCode/blob/master/app/src/main/java/com/gqq/leetcode/difficulty/medium/LC005.java) | 中等 |     字符串     |
+|  7   | [整数反转](https://leetcode-cn.com/problems/reverse-integer/) | [LC007.java](https://github.com/gqq519/LeetCode/blob/master/app/src/main/java/com/gqq/leetcode/difficulty/easy/LC007.java) | 简单 |      数学      |
+|  8   | [字符串转换整数](https://leetcode-cn.com/problems/string-to-integer-atoi/) | [LC008.java](https://github.com/gqq519/LeetCode/blob/master/app/src/main/java/com/gqq/leetcode/difficulty/medium/LC008.java) | 中等 |     字符串     |
+|  9   | [回文数](https://leetcode-cn.com/problems/palindrome-number/) | [LC009.java](https://github.com/gqq519/LeetCode/blob/master/app/src/main/java/com/gqq/leetcode/difficulty/easy/LC009.java) | 简单 |      数学      |
+|  13  | [罗马数字转整数](https://leetcode-cn.com/problems/roman-to-integer/) | [LC013.java](https://github.com/gqq519/LeetCode/blob/master/app/src/main/java/com/gqq/leetcode/difficulty/easy/LC013.java) | 简单 |  数学、字符串  |
+|  14  | [最长公共前缀](https://leetcode-cn.com/problems/longest-common-prefix/) | [LC014.java](https://github.com/gqq519/LeetCode/blob/master/app/src/main/java/com/gqq/leetcode/difficulty/easy/LC014.java) | 简单 |     字符串     |
+|  15  |      [三数之和](https://leetcode-cn.com/problems/3sum/)      | [LC015.java](https://github.com/gqq519/LeetCode/blob/master/app/src/main/java/com/gqq/leetcode/difficulty/medium/LC015.java) | 中等 |      数组      |
+|  21  | [合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/) | [LC021.java](https://github.com/gqq519/LeetCode/blob/master/app/src/main/java/com/gqq/leetcode/difficulty/easy/LC021.java) | 简单 |      链表      |
+|  24  |                                                              |                                                              |      |                |
+|  25  |                                                              |                                                              |      |                |
+|  26  | [删除排序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/) | [LC026.java](https://github.com/gqq519/LeetCode/blob/master/app/src/main/java/com/gqq/leetcode/difficulty/easy/LC026.java) | 简单 |      数组      |
+|  27  | [移除元素](https://leetcode-cn.com/problems/remove-element/) | [LC027.java](https://github.com/gqq519/LeetCode/blob/master/app/src/main/java/com/gqq/leetcode/difficulty/easy/LC027.java) | 简单 |      数组      |
+|  28  | [实现 strStr()](https://leetcode-cn.com/problems/implement-strstr/) | [LC028.java](https://github.com/gqq519/LeetCode/blob/master/app/src/main/java/com/gqq/leetcode/difficulty/easy/LC028.java) | 简单 |     字符串     |
+|  29  | [两数相除](https://leetcode-cn.com/problems/divide-two-integers/) | [LC029.java --TODO:题解说明](https://github.com/gqq519/LeetCode/blob/master/app/src/main/java/com/gqq/leetcode/difficulty/medium/LC029.java) | 中等 |    二分查找    |
+|  33  | [搜索旋转排序数组](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/) | [LC033.java](https://github.com/gqq519/LeetCode/blob/master/app/src/main/java/com/gqq/leetcode/difficulty/medium/LC033.java) | 中等 | 数组、二分查找 |
+|  34  | [在排序数组中查找元素的第一个和最后一个位置](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | [LC034](https://github.com/gqq519/LeetCode/blob/master/app/src/main/java/com/gqq/leetcode/difficulty/medium/LC034.java) | 中等 | 数组、二分查找 |
+|  35  | [搜索插入位置](https://leetcode-cn.com/problems/search-insert-position/) | [LC035](https://github.com/gqq519/LeetCode/blob/master/app/src/main/java/com/gqq/leetcode/difficulty/easy/LC035.kt) | 简单 |      数组      |
+|  38  | [外观数列](https://leetcode-cn.com/problems/count-and-say/)  | [LC038](https://github.com/gqq519/LeetCode/blob/master/app/src/main/java/com/gqq/leetcode/difficulty/easy/LC038.java) | 简单 |  数学、字符串  |
+| 141  | [环形链表](http://sleetcode.com/problems/linked-list-cycle/) | [LC141.java](https://github.com/gqq519/LeetCode/blob/master/app/src/main/java/com/gqq/leetcode/difficulty/easy/LC141.java) |      |                |
+| 142  | [环形链表II](https://leetcode.com/problems/linked-list-cycle-ii/) | [LC142.java](https://github.com/gqq519/LeetCode/blob/master/app/src/main/java/com/gqq/leetcode/difficulty/medium/LC142.java) |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+|      |                                                              |                                                              |      |                |
+| 206  | [反转链表](https://leetcode-cn.com/problems/reverse-linked-list/?utm_source=LCUS&utm_medium=ip_redirect_q_uns&utm_campaign=transfer2china) | [LC206.java](https://github.com/gqq519/LeetCode/blob/master/app/src/main/java/com/gqq/leetcode/interview/LC206.java) |      |                |
+
+### 堆栈 & 队列
+
+| 题号 |                           题目链接                           |                        本仓库题解代码                        |
+| :--: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+|  20  | [有效的括号](https://leetcode-cn.com/problems/valid-parentheses/) | [LC020.java](https://github.com/gqq519/LeetCode/blob/master/app/src/main/java/com/gqq/leetcode/difficulty/easy/LC020.java) |
+|      |                                                              |                                                              |
+|      |                                                              |                                                              |
 
 
-
-
-
-#### 数组 & 链表
-
-- https://leetcode.com/problems/reverse-linked-list/ （反转链表）
-- https://leetcode.com/problems/linked-list-cycle （环形链表）
-    - HashSet 记录走过的节点
-    - 快慢指针
-    - 标记法 -- 把特定节点标记成特殊元素
-- https://leetcode.com/problems/swap-nodes-in-pairs/ （交换链表中节点）
-- https://leetcode.com/problems/linked-list-cycle-ii （环形链表入环的第一个节点）
-    - HashSet 记录走过的节点
-    - 快慢指针
-- https://leetcode.com/problems/reverse-nodes-in-k-group/ （-------hard: TODO----）
-
-#### 堆栈 & 队列
 
 - https://leetcode.com/problems/implement-queue-using-stacks （栈实现队列）
 - https://leetcode.com/problems/implement-stack-using-queues/description/ （队列实现栈）

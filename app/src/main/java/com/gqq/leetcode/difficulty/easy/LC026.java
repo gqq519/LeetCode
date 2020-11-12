@@ -1,6 +1,6 @@
 package com.gqq.leetcode.difficulty.easy;
 
-/*
+/**
  * @lc app=leetcode id=26 lang=java
  *
  * [26] Remove Duplicates from Sorted Array
@@ -62,8 +62,9 @@ package com.gqq.leetcode.difficulty.easy;
  * print(nums[i]);
  * }
  *
- * thought:
- *
+ * 解题思路:
+ * 利用一个索引index，将遍历的不相同的i数据存入到索引index所在的位置，index++
+ * 数据遍历结束之后，index的位置就是最后一位置换数据的位置，那么最后数组的长度就是index + 1
  *
  */
 class LC026 {
