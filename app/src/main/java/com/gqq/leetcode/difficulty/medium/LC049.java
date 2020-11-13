@@ -25,7 +25,6 @@ import java.util.Map;
  *
  * 解法说明：
  * 借助HashMap和排序
- *
  */
 public class LC049 {
     public List<List<String>> groupAnagrams(String[] strs) {

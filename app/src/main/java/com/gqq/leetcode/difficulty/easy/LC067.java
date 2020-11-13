@@ -20,6 +20,13 @@ package com.gqq.leetcode.difficulty.easy;
  * Each string consists only of '0' or '1' characters.
  * 1 <= a.length, b.length <= 10^4
  * Each string is either "0" or doesn't contain any leading zero.
+ *
+ * https://leetcode-cn.com/problems/add-binary/
+ *
+ * 解题说明：
+ *
+ * 借助两个指针和StringBuilder，分别进行累加，注意点：累加的结果和进位运算
+ *
  */
 public class LC067 {
     public String addBinary(String a, String b) {

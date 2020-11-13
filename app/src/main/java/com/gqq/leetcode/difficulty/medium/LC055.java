@@ -1,5 +1,7 @@
 package com.gqq.leetcode.difficulty.medium;
 
+import android.icu.util.ULocale;
+
 /**
  * Given an array of non-negative integers, you are initially positioned at the first index of the array.
  *
@@ -25,6 +27,13 @@ package com.gqq.leetcode.difficulty.medium;
  *
  * 1 <= nums.length <= 3 * 10^4
  * 0 <= nums[i][j] <= 10^5
+ *
+ * https://leetcode-cn.com/problems/jump-game/
+ *
+ * 解题说明：
+ * 通过遍历得到每一个index所能达到的最大距离
+ * 根据所能达到的最大距离判断是否是已经到了数组末尾，如果不是，则不可达
+ *
  */
 public class LC055 {
 
