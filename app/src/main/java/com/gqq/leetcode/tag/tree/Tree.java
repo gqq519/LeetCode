@@ -3,7 +3,10 @@ package com.gqq.leetcode.tag.tree;
 import org.w3c.dom.Node;
 
 import java.util.ArrayDeque;
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
+import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.Stack;
 
@@ -253,5 +256,42 @@ public class Tree {
         }
     }
 
+    public List<Integer> preAll(Node tree) {
+        List<Integer> list = new ArrayList<>();
+        pre(tree, list);
+        return list;
+    }
 
+
+    private void pre(Node tree, List<Integer> list) {
+        if (tree != null) {
+
+            // 前序
+            list.add(tree.data);
+            if (tree.left != null) {
+                pre(tree.left, list);
+            }
+            if (tree.right != null) {
+                pre(tree.right, list);
+            }
+
+            // 中序
+            if (tree.left != null) {
+                pre(tree.left, list);
+            }
+            list.add(tree.data);
+            if (tree.right != null) {
+                pre(tree.right, list);
+            }
+
+            // 后序
+            if (tree.left != null) {
+                pre(tree.left, list);
+            }
+            if (tree.right != null) {
+                pre(tree.right, list);
+            }
+            list.add(tree.data);
+        }
+    }
 }

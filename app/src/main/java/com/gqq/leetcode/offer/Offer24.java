@@ -45,4 +45,26 @@ public class Offer24 {
         head.next = newHead;
         return reverse(next, head);
     }
+
+    public ListNode reverse(ListNode head) {
+        ListNode pre = null;
+        ListNode cur = head;
+        while (cur != null) {
+            ListNode next = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = next;
+        }
+
+
+        // 递归的方式
+        return reverse22(head, null);
+    }
+
+    private ListNode reverse22(ListNode head, ListNode newHead) {
+        if (head == null) return newHead;
+        ListNode next = head.next;
+        head.next = newHead;
+        return reverse22(next, head);
+    }
 }

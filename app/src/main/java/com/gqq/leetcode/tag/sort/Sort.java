@@ -98,7 +98,9 @@ public class Sort {
             // 将a[i] 与 a[j]的数据进行对比：不处理/数据搬移
             for (; j >= 0; j--) {
                 if (a[j] > value) {
-                    a[j + 1] = a[j]; // 数据迁移
+                    int tmp = a[j];
+                    a[j] = a[j+1];
+                    a[j+1] = tmp; // 数据迁移
                 } else {
                     break;
                 }
